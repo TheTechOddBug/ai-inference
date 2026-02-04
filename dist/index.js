@@ -58312,7 +58312,7 @@ async function simpleInference(request) {
     });
     const chatCompletionRequest = {
         messages: request.messages,
-        max_tokens: request.maxTokens,
+        max_completion_tokens: request.maxTokens,
         model: request.modelName,
         temperature: request.temperature,
         top_p: request.topP,
@@ -58349,7 +58349,7 @@ async function mcpInference(request, githubMcpClient) {
         coreExports.info(`MCP inference iteration ${iterationCount}`);
         const chatCompletionRequest = {
             messages: messages,
-            max_tokens: request.maxTokens,
+            max_completion_tokens: request.maxTokens,
             model: request.modelName,
             temperature: request.temperature,
             top_p: request.topP,
